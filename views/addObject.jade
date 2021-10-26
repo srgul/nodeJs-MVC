@@ -1,0 +1,25 @@
+extends layout
+block content 
+    div.container 
+        div.content 
+            div.d-flex.flex-row
+                h1.col-sm-10 Yeni obje oluştur
+                a(href="/").btn.btn-sm.btn-info.text-right.col-sm-2.logout(style="height: 30px; margin-top:auto; margin-bottom:auto; width:auto;") Çıkış Yap 
+            hr
+            div
+                form(action='/dashboard/addNewObject',method='post',  enctype='multipart/form-data')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='name') Obje Adı
+                        input.col-sm-9.form-control(id='name',type='text',value='',placeholder='Obje adı',name='name')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='lastname') Türü
+                        input.col-sm-9.form-control(id='lastname',type='text',value='',placeholder='Obje Türü',name='lastname')
+                    
+                    div.mt-3(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='resim') Obje seç
+                        input.col-sm-9.form-control-file(id='resim',type='file',value='',placeholder='@',name='resim')
+                    div(data-role='fieldcontain')   
+                    input.btn.btn-sm.btn-info.mt-3(type='submit',value='Sign Up',data-transition='fade', data-theme='c')

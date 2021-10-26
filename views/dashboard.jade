@@ -1,0 +1,25 @@
+extends layout 
+block content
+    div.container
+        div.content 
+            div.row 
+                h1 Obje Listesi 
+            hr 
+            div.row 
+                table.table.table-hover.table-bordered 
+                    thead 
+                        tr 
+                            th Obje Adı
+                            th Obje Açıklaması
+                            
+                    tbody 
+                        tr 
+                            
+                            td Obje Adı 
+                            td Obje Açıklaması
+                div.row 
+                    div.col-md-12
+                        a.btn.btn-primary.btn-sm(href="/dashboard/addNewObject") Yeni Obje Ekle
+                div.row.mt-3 
+                    div.col-md-12 
+                        a.btn.btn-primary.btn-sm(href="/users/createNewUser") Yeni Kullanıcı Ekle

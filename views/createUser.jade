@@ -1,0 +1,37 @@
+extends layout
+block content 
+    div.container 
+        div.content 
+            div.d-flex.flex-row
+                h1.col-sm-10 Yeni Kullanıcı oluştur
+                a(href="/").btn.btn-sm.btn-info.text-right.col-sm-2.logout(style="height: 30px; margin-top:auto; margin-bottom:auto; width:auto;") Çıkış Yap 
+            hr
+            div
+                form(action='/users/addUser',method='post')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='name') İsim
+                        input.col-sm-9.form-control(id='name',type='text',value='',name='name')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='lastname') Soyisim
+                        input.col-sm-9.form-control(id='lastname',type='text',value='',name='lastname')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='phone') Tel
+                        input.col-sm-9.form-control(id='phone',type='text',value='',name='phone')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='lastname') Şirket Adı
+                        input.col-sm-9.form-control(id='lastname',type='text',value='',name='company')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='lastname') Kullancı Adı
+                        input.col-sm-9.form-control(id='lastname',type='text',value='',name='username')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='lastname') Şifre
+                        input.col-sm-9.form-control(id='lastname',type='text',value='',name='password')
+                    
+                    div(data-role='fieldcontain')   
+                    input.btn.btn-sm.btn-info.mt-3(type='submit',value='Kaydet',data-transition='fade', data-theme='c')
