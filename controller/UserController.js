@@ -13,7 +13,8 @@ exports.createUser = function(req, res, next) {
         companyName: req.body.companyName,
         username: req.body.username,
         password: req.body.password,
-        role: "user"
+        role: "user",
+        objId : "dasta"
     }).save(function(err, comment) {
         res.redirect('/dashboard')
     })

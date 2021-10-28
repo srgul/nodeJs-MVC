@@ -19,9 +19,11 @@ exports.createNewObject = function(req, res, next) {
     new Object({
         name: objName,
         desc: objDesc,
-        filename: imgObj.filename
+        filename: imgObj.filename,
+        userId: "userId"
     }).save( function(err, comment) {
         res.redirect('/dashboard')
+        console.log(err)
     })
 } 
 

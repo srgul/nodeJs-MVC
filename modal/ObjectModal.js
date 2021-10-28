@@ -8,10 +8,11 @@ var object = new Schema({
     name: String,
     desc: String,
     filename: String,
-    userId: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-    }
+    userId: String
+    //     {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     ref: 'User'
+    // }
 });
 
 mongoose.model('Object', object);
