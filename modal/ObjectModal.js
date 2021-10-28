@@ -9,10 +9,6 @@ var object = new Schema({
     desc: String,
     filename: String,
     userId: String
-    //     {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     ref: 'User'
-    // }
 });
 
 mongoose.model('Object', object);
