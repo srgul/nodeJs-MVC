@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Object = mongoose.model('Object')
+var addSession = require('./SessionController');
 
 exports.getDashboard = function(req, res, next) {
     Object.find(function(err, object) {
@@ -15,6 +16,8 @@ exports.createNewObject = function(req, res, next) {
     const objName = req.body.imageName;
     const objDesc = req.body.imageDsc;
     const imgObj = req.file
+
+
     
     new Object({
         name: objName,

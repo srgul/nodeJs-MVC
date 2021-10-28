@@ -7,9 +7,9 @@ exports.loginValidController = function(req, res, next) {
     const pwd = req.body.password
 
     User.find({username: username, password: pwd}, (err, data)  => {
-        console.log(data[0].id)
+        console.log(data[0]._id.toString())
         if (data.length > 0) {
-            var params = "data"
+            var params = data[0]._id.toString()
             addSession.addSession(params);
             res.redirect('/dashboard')
         } else {

@@ -8,3 +8,7 @@ exports.addSession = function (params) {
 
     })
 }
+
+exports.getId = function(){
+
+}
