@@ -1,0 +1,14 @@
+extends layout
+block content 
+    div.container 
+        div.content 
+            div.d-flex.flex-row
+                h1.col-sm-10 Yeni obje oluştur
+                a(href="/").btn.btn-sm.btn-info.text-right.col-sm-2.logout(style="height: 30px; margin-top:auto; margin-bottom:auto; width:auto;") Çıkış Yap 
+            hr
+            div
+                form(method='post', enctype='multipart/form-data', action="/dashboard/addNewObject")
+                    input.col-sm-12.form-control.form-control-sm.mb-1(type="text", placeholder="Obje Adı"  , name="imageName")
+                    input.col-sm-12.form-control.form-control-sm.mb-1(type="text", placeholder="Obje Açıklaması"  , name="imageDsc")
+                    input.col-sm-12.form-control-sm.form-control(type='file', name='imageupload')
+                    input.col-sm-1.mt-3(type='submit', name='uploadimage', value='Upload Image')

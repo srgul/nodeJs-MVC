@@ -1,0 +1,31 @@
+extends layout 
+block content
+    div.container
+        div.content 
+            div.row 
+                h1.col-sm-10 Obje Listesi 
+                a(href="/").btn.btn-sm.btn-info.text-right.col-sm-2.logout(style="height: 30px; margin-top:auto; margin-bottom:auto; width:auto;") Çıkış Yap 
+            hr 
+            div.row 
+                table.table.table-hover.table-bordered 
+                    thead 
+                        tr 
+                            th No
+                            th Obje Adı
+                            th Obje Açıklaması
+                            th 
+                            
+                    tbody 
+                        each object, i in objectlist
+                            tr 
+                                td #{i+1}
+                                td #{object.name} 
+                                td #{object.desc}
+                                td 
+                                    a.btn.btn.danger.btn-sm(style="color:white; background: red; font-weight: 500;")(href="/dashboard/delete/"+ object._id) Objeyi sil
+                div.row 
+                    div.col-md-12
+                        a.btn.btn-primary.btn-sm(href="/dashboard/addNewObject") Yeni Obje Ekle
+                div.row.mt-3 
+                    div.col-md-12 
+                        a.btn.btn-primary.btn-sm(href="/users/createNewUser") Yeni Kullanıcı Ekle

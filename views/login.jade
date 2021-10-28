@@ -1,0 +1,21 @@
+extends layout 
+
+block content 
+    div.container 
+        div.content 
+            h1 Giriş Yap
+            hr
+            div
+                form(action='/login/onLogin',method='post')
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='name') Kullanıcı Adı
+                        input.col-sm-9.form-control(id='name',type='text',value='',placeholder='Kullanıcı Adı',name='username', required)
+                    div(data-role='fieldcontain')
+                    fieldset(data-role='controlgroup')
+                        label(for='lastname') Şifre
+                        input.col-sm-9.form-control(id='lastname',type='password',value='',placeholder='Şifre',name='password', required)
+                    div(data-role='fieldcontain')
+                
+                    div(data-role='fieldcontain')   
+                    input.btn.btn-sm.btn-info.mt-3(type='submit',value='Sign Up',data-transition='fade', data-theme='c')
